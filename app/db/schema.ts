@@ -5,7 +5,8 @@ export const user = pgTable("user", {
     name: text("name").notNull(),
     email: text("email").notNull(),
     emailVerified: boolean("email_verified").notNull().default(false),
-    password: text("password").notNull(),
+    image: text("image"),
+    password: text("password"), // Hacer opcional para OAuth
     createdAt: timestamp("created_at").notNull(),
     updatedAt: timestamp("updated_at").notNull()
 });
